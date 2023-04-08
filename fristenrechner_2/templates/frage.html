@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Entscheidungsbaum</title>
+  </head>
+  <body>
+    <h1>Entscheidungsbaum</h1>
+    <p>{{ frage }}</p>
+    <form action="/frage" method="POST">
+      {% for antwort, neue_frage in antworten.items() %}
+        <input type="radio" name="antwort" value="{{ antwort }}">
+        {{ antwort }}<br>
+        <input type="hidden" name="neue_frage" value="{{ neue_frage }}">
+      {% endfor %}
+      <br>
+      <input type="submit" value="Antwort senden">
+    </form>
+    <p>{{ loesung }}</p>
+  </body>
+</html>
