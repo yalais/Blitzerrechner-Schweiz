@@ -31,9 +31,11 @@ def index():
 def kategorie():
     gefahrene = int(request.form.get('gefahren'))
     erlaubte = int(request.form.get('erlaubt'))
+    wiederholung = request.form.get('wiederholung')
     radar = request.form.get('radar')
     session['gefahrene'] = gefahrene
     session['erlaubte'] = erlaubte
+    session['wiederholung'] = wiederholung
 # berechne die überschreitung
     if radar == 'laser':
         if gefahrene < 100:
@@ -59,10 +61,13 @@ def kategorie():
 
     session['result'] = result
 
-    if result > 0:
+    if result > 0 and wiederholung == 'nein':
         return render_template('kategorie.html')
-    else:
+    elif result <= 0:
         return render_template('keine_strafe.html')
+    elif wiederholung == 'ja':
+        return render_template('wiederholungstaeter.html', result=result)
+
 
 
 # Auswahl des starssentyps und weiterleitung an das Resultat

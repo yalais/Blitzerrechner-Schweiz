@@ -6,6 +6,14 @@
     <title>Eingabe</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
+<style>
+    .radio-container {
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
+
 <body>
     <h1>Gib die Werte für Ist und Soll ein und wähle eine Kategorie:</h1>
     <form action="/kategorie" method="post">
@@ -15,12 +23,22 @@
         <label for="erlaubt">Erlaubte Geschwindigkeit:</label>
         <input type="number" name="erlaubt" id="erlaubt" required>
         <br>
+        <br>
         <label for="radar">Radar-Typ:</label>
         <select name="radar" id="radar" required>
             <option value="laser">Laser</option>
             <option value="mobil">Mobil</option>
             <option value="stationaer">Stationär</option>
         </select>
+        <label for="wiederholung">Wiederholungstäter:</label>
+        <div class="radio-container">
+            <input type="radio" id="ja" name="wiederholung" value="ja">
+            <label for="ja">Ja</label>
+        </div>
+        <div class="radio-container">
+            <input type="radio" id="nein" name="wiederholung" value="nein">
+            <label for="nein">Nein</label>
+        </div>
         <br>
         <input type="submit" value="Weiter">
     </form>
