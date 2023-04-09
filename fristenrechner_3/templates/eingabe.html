@@ -1,0 +1,28 @@
+<!-- eingabe.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Eingabe</title>
+</head>
+<body>
+    <h1>Gib die Werte für Ist und Soll ein und wähle eine Kategorie:</h1>
+    <form action="/kategorie" method="post">
+        <label for="gefahren">Gefahrene Geschwindigkeit:</label>
+        <input type="number" name="gefahren" id="gefahren" required>
+        <br>
+        <label for="erlaubt">Erlaubte Geschwindigkeit:</label>
+        <input type="number" name="erlaubt" id="erlaubt" required>
+        <br>
+        <label for="radar">Radar-Typ:</label>
+        <select name="radar" id="radar" required>
+            <option value="laser">Laser</option>
+            <option value="mobil">Mobil</option>
+            <option value="stationaer">Stationär</option>
+        </select>
+        <br>
+        <input type="submit" value="Weiter">
+    </form>
+</body>
+</html>
+
