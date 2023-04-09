@@ -58,7 +58,11 @@ def kategorie():
             result = gefahrene - erlaubte - 7
 
     session['result'] = result
-    return render_template('kategorie.html')
+
+    if result > 0:
+        return render_template('kategorie.html')
+    else:
+        return render_template('keine_strafe.html')
 
 
 # Auswahl des starssentyps und weiterleitung an das Resultat
@@ -66,17 +70,47 @@ def kategorie():
 def ergebnis():
     answer = request.form.get('kategorie')
     result = session['result']
-    entzug = 0
+    strafe = 0
     busse = 0
 
     if answer == '30':
-        if result >= 1 and result <= 5:
-            entzug = 0
+        if result <= 5:
+            strafe = 'keine weitere Strafe'
             busse = 40
-        elif result >= 6 and result <=10:
-            entzug = 0
+        elif result <= 10:
+            strafe = 'keine weitere Strafe'
             busse = 120
-        return render_template('ergebnis1.html', result=result, entzug=entzug, busse=busse)
+        elif result <= 15:
+            strafe = 'keine weitere Strafe'
+            busse = 250
+        elif result <= 17:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 19:
+            strafe = 'keine weitere Strafe'
+            busse = 600
+        elif result <= 20:
+            strafe = 'keine weitere Strafe'
+            busse = '30 Tagessätze'
+        elif result <= 24:
+            strafe = 'keine weitere Strafe'
+            busse = '30 Tagessätze'
+        elif result <= 25:
+            strafe = 'keine weitere Strafe'
+            busse = '30 Tagessätze'
+        elif result <= 29:
+            strafe = 'keine weitere Strafe'
+            busse = '50 Tagessätze'
+        elif result <= 34:
+            strafe = 'keine weitere Strafe'
+            busse = '90 Tagessätze'
+        elif result <= 39:
+            strafe = 'keine weitere Strafe'
+            busse = '120 Tagessätze'
+        else:
+            strafe = 'mindestens 1 Jahr Freiheitsentzug'
+            busse = 'mindestens 300'
+        return render_template('ergebnis1.html', result=result, strafe=strafe, busse=busse)
     
     elif answer == '50':
         return render_template('ergebnis2.html', result=result)
