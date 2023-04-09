@@ -66,6 +66,5 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-# zu schnelle geschwindigkeit(result) in end resultat einfügen
-# end html ausführen mit strafe
+
 # abzüge kontrollieren pro Radartyp immer gleich?
