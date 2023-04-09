@@ -51,13 +51,24 @@ def kategorie():
 def ergebnis():
     answer = request.form.get('kategorie')
     result = session['result']
+    entzug = 0
+    busse = 0
 
     if answer == '30':
-        return render_template('ergebnis1.html', result=result)
+        if result >= 1 and result <= 5:
+            entzug = 0
+            busse = 40
+        elif result >= 6 and result <=10:
+            entzug = 0
+            busse = 120
+        return render_template('ergebnis1.html', result=result, entzug=entzug, busse=busse)
+    
     elif answer == '50':
         return render_template('ergebnis2.html', result=result)
+    
     elif answer == '80':
         return render_template('ergebnis3.html', result=result)
+    
     elif answer == '120':
         return render_template('ergebnis4.html', result=result)
 
@@ -68,3 +79,6 @@ if __name__ == '__main__':
 
 
 # abzüge kontrollieren pro Radartyp immer gleich?
+# Bild wird nicht angezeigt
+# wiederholungstäter einbeziehen
+# Dataframe zur auswahl der Straffen anstelle von unendlich vielen if else statements
