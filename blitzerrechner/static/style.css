@@ -1,42 +1,64 @@
+/* style.css */
+
+/* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
+    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #9bc4f1;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 
+p {
+    margin-bottom: 1em;
+}
+
+/* Formular-Stile */
 form {
-    margin-top: 30px;
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
-input[type="number"] {
-    padding: 10px;
-    border-radius: 5px;
+input[type="text"],
+select {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
     border: 1px solid #ccc;
-    margin-bottom: 20px;
+    border-radius: 3px;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #007bff;
     color: #fff;
+    text-decoration: none;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 18px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #0056b3;
 }
+

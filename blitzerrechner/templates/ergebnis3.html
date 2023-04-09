@@ -1,11 +1,41 @@
-<!-- ergebnis.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Ergebnis</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ergebniss innerorts </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_ergebnisse.css') }}">
 </head>
 <body>
-    <h1>Du bist {{ result }} zu schnell Gefahren</h1>
+<div class="container">
+    <header class="centered">
+        <h1>Ausserorts</h1>
+        <p>Du warst {{result}} km/h zu schnell unterwegs</p>
+    </header>
+
+    <section>
+        <h2>Folgende Strafe könnte dir drohen</h2>
+        <ul>
+            <li>Bussenkatalog</li>
+            <li>Zweites Element der Liste</li>
+            <li>Drittes Element der Liste</li>
+            <li>Viertes Element der Liste</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Bild</h2>
+        <img src="..\..\image\ergebnisse\sport_car_dog.png" alt="Sportcar dog" style="max-width: 100%;">
+    </section>
+
+    <section>
+        <h2>Memorium</h2>
+        <p>
+            Weil du zu schnell warst musst du ins Gefängnis, für immer!
+        </p>
+    </section>
+</div>
+
 </body>
 </html>
