@@ -72,7 +72,7 @@ def ergebnis():
     result = session['result']
     strafe = 0
     busse = 0
-
+#Strafenkatalog für 30er-Zone
     if answer == '30':
         if result <= 5:
             strafe = 'keine weitere Strafe'
@@ -112,14 +112,161 @@ def ergebnis():
             busse = 'mindestens 300'
         return render_template('ergebnis1.html', result=result, strafe=strafe, busse=busse)
     
+#Strafenkatalog innerorts
     elif answer == '50':
-        return render_template('ergebnis2.html', result=result)
+        if result <= 5:
+            strafe = 'keine weitere Strafe'
+            busse = 40
+        elif result <= 10:
+            strafe = 'keine weitere Strafe'
+            busse = 120
+        elif result <= 15:
+            strafe = 'keine weitere Strafe'
+            busse = 250
+        elif result <= 17:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 19:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 20:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 24:
+            strafe = 'keine weitere Strafe'
+            busse = 600
+        elif result <= 25:
+            strafe = 'keine weitere Strafe'
+            busse = '20 Tagessätze'
+        elif result <= 29:
+            strafe = 'keine weitere Strafe'
+            busse = '20 Tagessätze'
+        elif result <= 34:
+            strafe = 'keine weitere Strafe'
+            busse = '50 Tagessätze'
+        elif result <= 39:
+            strafe = 'keine weitere Strafe'
+            busse = '70 Tagessätze'
+        elif result <= 44:
+            strafe = 'keine weitere Strafe'
+            busse = 'mindestens 120 Tagessätze'
+        elif result <= 49:
+            strafe = 'keine weitere Strafe'
+            busse = 'mindestens 120 Tagessätze'
+        else:
+            strafe = 'mindestens 1 Jahr Freiheitsentzug'
+            busse = 'mindestens 300'
+        return render_template('ergebnis2.html', result=result, strafe=strafe, busse=busse)
     
+#Strafenkatalog Auserorts
     elif answer == '80':
-        return render_template('ergebnis3.html', result=result)
+        if result <= 5:
+            strafe = 'keine weitere Strafe'
+            busse = 40
+        elif result <= 10:
+            strafe = 'keine weitere Strafe'
+            busse = 100
+        elif result <= 15:
+            strafe = 'keine weitere Strafe'
+            busse = 160
+        elif result <= 17:
+            strafe = 'keine weitere Strafe'
+            busse = 240
+        elif result <= 19:
+            strafe = 'keine weitere Strafe'
+            busse = 240
+        elif result <= 20:
+            strafe = 'keine weitere Strafe'
+            busse = 240
+        elif result <= 24:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 25:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 29:
+            strafe = 'keine weitere Strafe'
+            busse = 600
+        elif result <= 34:
+            strafe = 'keine weitere Strafe'
+            busse = '10 Tagessätze'
+        elif result <= 39:
+            strafe = 'keine weitere Strafe'
+            busse = '12 Tagessätze'
+        elif result <= 44:
+            strafe = 'keine weitere Strafe'
+            busse = '60 Tagessätze'
+        elif result <= 49:
+            strafe = 'keine weitere Strafe'
+            busse = '90 Tagessätze'
+        elif result <= 44:
+            strafe = 'keine weitere Strafe'
+            busse = 'mindestens 120 Tagessätze'
+        elif result <= 49:
+            strafe = 'keine weitere Strafe'
+            busse = 'mindestens 120 Tagessätze'
+        else:
+            strafe = 'mindestens 1 Jahr Freiheitsentzug'
+            busse = 'mindestens 300'
+        return render_template('ergebnis3.html', result=result, strafe=strafe, busse=busse)
     
+# Strafenkatalog Autobahn
     elif answer == '120':
-        return render_template('ergebnis4.html', result=result)
+        if result <= 5:
+            strafe = 'keine weitere Strafe'
+            busse = 20
+        elif result <= 10:
+            strafe = 'keine weitere Strafe'
+            busse = 60
+        elif result <= 15:
+            strafe = 'keine weitere Strafe'
+            busse = 120
+        elif result <= 17:
+            strafe = 'keine weitere Strafe'
+            busse = 180
+        elif result <= 19:
+            strafe = 'keine weitere Strafe'
+            busse = 180
+        elif result <= 20:
+            strafe = 'keine weitere Strafe'
+            busse = 180
+        elif result <= 24:
+            strafe = 'keine weitere Strafe'
+            busse = 260
+        elif result <= 25:
+            strafe = 'keine weitere Strafe'
+            busse = 260
+        elif result <= 29:
+            strafe = 'keine weitere Strafe'
+            busse = 400
+        elif result <= 34:
+            strafe = 'keine weitere Strafe'
+            busse = 600
+        elif result <= 39:
+            strafe = 'keine weitere Strafe'
+            busse = '20 Tagessätze'
+        elif result <= 44:
+            strafe = 'keine weitere Strafe'
+            busse = '30 Tagessätze'
+        elif result <= 49:
+            strafe = 'keine weitere Strafe'
+            busse = '50 Tagessätze'
+        elif result <= 44:
+            strafe = 'keine weitere Strafe'
+            busse = '60 Tagessätze'
+        elif result <= 49:
+            strafe = 'keine weitere Strafe'
+            busse = '70 Tagessätze'
+        elif result <= 44:
+            strafe = 'keine weitere Strafe'
+            busse = '90 Tagessätze'
+        elif result <= 49:
+            strafe = 'keine weitere Strafe'
+            busse = 'mindestens 120 Tagessätze'
+        else:
+            strafe = 'mindestens 1 Jahr Freiheitsentzug'
+            busse = 'mindestens 300'
+        return render_template('ergebnis4.html', result=result, strafe=strafe, busse=busse)
 
 
 if __name__ == '__main__':
