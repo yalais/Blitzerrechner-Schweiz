@@ -279,7 +279,6 @@ if __name__ == '__main__':
 
 
 
-# abzüge kontrollieren pro Radartyp immer gleich?
 # Bild wird nicht angezeigt
-# wiederholungstäter einbeziehen
-# Dataframe zur auswahl der Straffen anstelle von unendlich vielen if else statements
+# wiederholungstäter bessere Lösung generieren
+# Dataframe zur auswahl der Strafen anstelle von unendlich vielen if else statements
