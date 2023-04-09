@@ -34,13 +34,28 @@ def kategorie():
     radar = request.form.get('radar')
     session['gefahrene'] = gefahrene
     session['erlaubte'] = erlaubte
-
+# berechne die überschreitung
     if radar == 'laser':
-        result = gefahrene - erlaubte - 1
+        if gefahrene < 100:
+            result = gefahrene - erlaubte - 3
+        elif gefahrene <= 100 and gefahrene < 150:
+            result = gefahrene - erlaubte - 4
+        elif gefahrene >= 150:
+            result = gefahrene - erlaubte - 5
     elif radar == 'mobil':
-        result = gefahrene - erlaubte - 3
+        if gefahrene < 100:
+            result = gefahrene - erlaubte - 7
+        elif gefahrene <= 100 and gefahrene < 150:
+            result = gefahrene - erlaubte - 8
+        elif gefahrene >= 150:
+            result = gefahrene - erlaubte - 9
     elif radar == 'stationaer':
-        result = gefahrene - erlaubte - 5
+        if gefahrene < 100:
+            result = gefahrene - erlaubte - 5
+        elif gefahrene <= 100 and gefahrene < 150:
+            result = gefahrene - erlaubte - 6
+        elif gefahrene >= 150:
+            result = gefahrene - erlaubte - 7
 
     session['result'] = result
     return render_template('kategorie.html')
