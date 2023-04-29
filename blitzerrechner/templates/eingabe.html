@@ -15,33 +15,46 @@
 </style>
 
 <body>
-    <h1>Gib die Werte für Ist und Soll ein und wähle eine Kategorie:</h1>
-    <form action="/kategorie" method="post">
-        <label for="gefahren">Gefahrene Geschwindigkeit:</label>
-        <input type="number" name="gefahren" id="gefahren" required>
-        <br>
-        <label for="erlaubt">Erlaubte Geschwindigkeit:</label>
-        <input type="number" name="erlaubt" id="erlaubt" required>
-        <br>
-        <br>
-        <label for="radar">Radar-Typ:</label>
-        <select name="radar" id="radar" required>
-            <option value="laser">Laser</option>
-            <option value="mobil">Mobil</option>
-            <option value="stationaer">Stationär</option>
-        </select>
-        <label for="wiederholung">Wiederholungstäter:</label>
-        <div class="radio-container">
-            <input type="radio" id="ja" name="wiederholung" value="ja">
-            <label for="ja">Ja</label>
-        </div>
-        <div class="radio-container">
-            <input type="radio" id="nein" name="wiederholung" value="nein">
-            <label for="nein">Nein</label>
-        </div>
-        <br>
-        <input type="submit" value="Weiter">
-    </form>
+<div>
+    <section>
+        <h1>Geben Sie Ihre geschätze Geschwindigkeit, die erlaubte Geschwindigkeit sowie Ihren Status als Wiederholungstäter ein.</h1>
+        <form action="/kategorie" method="post">
+            <label for="gefahren">Gefahrene Geschwindigkeit:</label>
+            <input type="number" name="gefahren" id="gefahren" required>
+            <br>
+            <label for="erlaubt">Erlaubte Geschwindigkeit:</label>
+            <input type="number" name="erlaubt" id="erlaubt" required>
+            <br>
+            <br>
+            <label for="radar">Radar-Typ:</label>
+            <select name="radar" id="radar" required>
+                <option value="laser">Laser</option>
+                <option value="mobil">Mobil</option>
+                <option value="stationaer">Stationär</option>
+            </select>
+            <label for="wiederholung">Wiederholungstäter:</label>
+            <div class="radio-container">
+                <input type="radio" id="ja" name="wiederholung" value="ja">
+                <label for="ja">Ja</label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" id="nein" name="wiederholung" value="nein">
+                <label for="nein">Nein</label>
+            </div>
+            <br>
+            <input type="submit" value="Weiter">
+        </form>
+    </section>
+
+    <section>
+        <h2>Kontakt</h2>
+         <p>Bei Fragen erreichen Sie uns unter folgender <a href="mailto:yannic.lais@gmx.ch>">E-Mail.</a></p>
+     </section>
+    
+    <footer>
+        <p>© 2021 by blitzerrechner.ch</p>
+    </footer>
+</div>
 </body>
 </html>
 
