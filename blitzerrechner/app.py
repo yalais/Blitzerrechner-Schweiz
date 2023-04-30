@@ -114,7 +114,7 @@ def ergebnis():
             busse = '120 Tagessätze'
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
-            busse = 'mindestens 300'
+            busse = 'Strafverfahren'
         return render_template('ergebnis1.html', result=result, strafe=strafe, busse=busse)
     
 #Strafenkatalog innerorts
@@ -138,29 +138,29 @@ def ergebnis():
             strafe = 'keine weitere Strafe'
             busse = 400
         elif result <= 24:
-            strafe = 'keine weitere Strafe'
+            strafe = '1 Monat Ausweisentzug'
             busse = 600
         elif result <= 25:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '20 Tagessätze'
         elif result <= 29:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '20 Tagessätze'
         elif result <= 34:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '50 Tagessätze'
         elif result <= 39:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '70 Tagessätze'
         elif result <= 44:
-            strafe = 'keine weitere Strafe'
+            strafe = 'mindestens 24 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         elif result <= 49:
-            strafe = 'keine weitere Strafe'
+            strafe = 'mindestens 24 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
-            busse = 'mindestens 300'
+            busse = 'Strafverfahren'
         return render_template('ergebnis2.html', result=result, strafe=strafe, busse=busse)
     
 #Strafenkatalog Auserorts
@@ -190,29 +190,29 @@ def ergebnis():
             strafe = 'keine weitere Strafe'
             busse = 400
         elif result <= 29:
-            strafe = 'keine weitere Strafe'
+            strafe = '1 Monat Ausweisentzug'
             busse = 600
         elif result <= 34:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '10 Tagessätze'
         elif result <= 39:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '12 Tagessätze'
         elif result <= 44:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '60 Tagessätze'
         elif result <= 49:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '90 Tagessätze'
         elif result <= 44:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         elif result <= 49:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
-            busse = 'mindestens 300'
+            busse = 'Strafverfahren'
         return render_template('ergebnis3.html', result=result, strafe=strafe, busse=busse)
     
 # Strafenkatalog Autobahn
@@ -245,32 +245,32 @@ def ergebnis():
             strafe = 'keine weitere Strafe'
             busse = 400
         elif result <= 34:
-            strafe = 'keine weitere Strafe'
+            strafe = '1 Monat Ausweisentzug'
             busse = 600
         elif result <= 39:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '20 Tagessätze'
         elif result <= 44:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '30 Tagessätze'
         elif result <= 49:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '50 Tagessätze'
         elif result <= 44:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '60 Tagessätze'
         elif result <= 49:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '70 Tagessätze'
         elif result <= 44:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = '90 Tagessätze'
         elif result <= 49:
-            strafe = 'keine weitere Strafe'
+            strafe = '3 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
-            busse = 'mindestens 300'
+            busse = 'Strafverfahren'
         return render_template('ergebnis4.html', result=result, strafe=strafe, busse=busse)
 
 
