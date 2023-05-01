@@ -8,5 +8,9 @@ python app.py
 '''
 
 ## Weitere Schritte:
-- Ab wann und wo Fahrausweisentzug
+
 - Besseres Backend für Strafmass
+- schönes front-end
+- Wiederholungstäter
+- Spendenmöglichkeit über Twint?
+- kurze Zusammenfassung ausland
