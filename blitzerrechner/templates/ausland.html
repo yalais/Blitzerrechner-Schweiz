@@ -9,6 +9,20 @@
     section {
         margin-bottom: 20px;
     }
+
+    .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
 </style>
 
 </head>
@@ -16,24 +30,74 @@
     <div>
         <section>
             <h1>Ausland</h1>
+            <h4>Leider funktionieren die Berechnungen momentan erst in der Schweiz. <br/>
+            Anbei finden Sie jedoch einige spannende Seiten, welche Ihnen helfen könnten.</h4>
         </section>
 
         <section>
             <h2>Bussenkatalog Deutschland</h2>
             <ul>
-                <li>Quelle 1</li>
-                <li>Quelle 2</li>
-                <li>Quelle 3</li>
+                <li><a href = "https://www.bussgeldkatalog.org/">Bussgeldrechner Deutschland</a></li>
+                <li><a href = "https://www.adac.de/verkehr/recht/bussgeld-punkte/bussgeldrechner/">Bussgeldrechner Deutschland ADAC</a></li>
             </ul>
         </section>
 
         <section>
             <h2>Bussenkatalog Österreich</h2>
             <ul>
-                <li>Quelle 1</li>
-                <li>Quelle 2</li>
-                <li>Quelle 3</li>
+                <li><a href = "https://autorevue.at/bussgeldrechner">Bussgeldrechner Österreich</a></li>
             </ul>
+            <h1>Tabelle der Bußgelder</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Übertretung</th>
+                        <th>Bußgeld</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Geschwindigkeitsverstoß ab 20 km/h</td>
+                        <td>mind. 30 €</td>
+                    </tr>
+                    <tr>
+                        <td>Geschwindigkeitsverstoß über 50 km/h</td>
+                        <td>bis zu 2.180 €</td>
+                    </tr>
+                    <tr>
+                        <td>Alkohol am Steuer (ab 0,5 Promille)</td>
+                        <td>mind. 300 €</td>
+                    </tr>
+                    <tr>
+                        <td>Missachtung von Rotlicht (Ampel)</td>
+                        <td>mind. 70 €</td>
+                    </tr>
+                    <tr>
+                        <td>Überholvergehen</td>
+                        <td>mind. 40 €</td>
+                    </tr>
+                    <tr>
+                        <td>Handy am Steuer</td>
+                        <td>mind. 50 €</td>
+                    </tr>
+                    <tr>
+                        <td>Missachtung der Gurtpflicht</td>
+                        <td>mind. 35 €</td>
+                    </tr>
+                    <tr>
+                        <td>Kein Mitführen einer Warnweste</td>
+                        <td>mind. 14 €</td>
+                    </tr>
+                    <tr>
+                        <td>Verstoß gegen die Winterreifenpflicht</td>
+                        <td>mind. 60 €</td>
+                    </tr>
+                    <tr>
+                        <td>Parkvergehen / Falschparken</td>
+                        <td>mind. 20 €</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section>
