@@ -1,3 +1,16 @@
+''' Code Descriptiopn:
+    This is the main file of the project. It contains all the routes and the logic of the application.
+    The application is a speed camera calculator for Switzerland. It calculates the fine and the
+    driving ban for the driver.
+    At first you have to input the country where you were speeding.
+    Next you should estimate your speed and the speed limit. Then you have to choose the type of the speed camera.
+    As well as you have to choose if you were speeding for the first time or not.
+    
+    The fines and the driving bans are calculated based on the Swiss law.'''
+
+
+
+#imports
 from flask import Flask, request, render_template, session, redirect, url_for
 from flask_session import Session
 
@@ -7,12 +20,12 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 Session(app)
 
-# öffnet das html mit Landesauswahl
+# Opens the html file for the landing page == the country selection
 @app.route('/')
 def land():
     return render_template('land.html')
 
-# Landesauswahl wird überprüft und zu geschwindigkeits eingabe weitergeleitet
+# if the country is Switzerland, the user is redirected to the speed input page
 @app.route('/land_weiterleitung', methods=['POST'])
 def land_weiterleitung():
     land = request.form.get('land')
@@ -21,12 +34,14 @@ def land_weiterleitung():
     elif land == 'ausland':
         return render_template('ausland.html')
 
-# weiterleitung geschwindigkeits eingabe
+# redericting to the speed input page
 @app.route('/eingabe')
 def index():
     return render_template('eingabe.html')
 
-# speichern der Geschwindigkeitsangaben in Session
+'''calculating the speed difference and redirecting to the street type selection
+If the difference is 0 or negative, the user is redirected to the page with no fine'''
+
 @app.route('/kategorie', methods=['POST'])
 def kategorie():
     gefahrene = int(request.form.get('gefahren'))
@@ -37,7 +52,7 @@ def kategorie():
     session['erlaubte'] = erlaubte
     session['wiederholung'] = wiederholung
     
-# berechne die überschreitung
+# calculating the speed difference
     if radar == 'laser':
         if gefahrene < 100:
             result = gefahrene - erlaubte - 3
@@ -71,7 +86,7 @@ def kategorie():
 
 
 
-# Auswahl des starssentyps und weiterleitung an das Resultat
+# Selecting the street type and calculating the fine and the driving ban
 @app.route('/ergebnis', methods=['POST'])
 def ergebnis():
     answer = request.form.get('kategorie')
