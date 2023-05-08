@@ -9,8 +9,6 @@ python app.py
 
 ## Weitere Schritte:
 
-- Besseres Backend für Strafmass
 - schönes front-end
 - Wiederholungstäter
 - Spendenmöglichkeit über Twint?
-- kurze Zusammenfassung ausland
