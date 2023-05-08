@@ -41,6 +41,17 @@ def land_weiterleitung():
         return redirect(url_for('index'))
     elif land == 'ausland':
         return render_template('ausland.html')
+    elif land == 'deutschland':
+        return render_template('countries/deutschland.html')
+    elif land == 'frankreich':
+        return render_template('countries/frankreich.html')
+    elif land == 'italien':
+        return render_template('countries/italien.html')
+    elif land == 'oesterreich':
+        return render_template('countries/oesterreich.html')
+    elif land == 'lichtenstein':
+        return render_template('countries/lichtenstein.html')
+
 
 # redericting to the speed input page
 @app.route('/eingabe')
@@ -87,7 +98,7 @@ def kategorie():
     if result > 0 and wiederholung == 'nein':
         return render_template('kategorie.html')
     elif result <= 0:
-        return render_template('keine_strafe.html')
+        return render_template('ergebnisse/keine_strafe.html')
     elif wiederholung == 'ja':
         return render_template('wiederholungstaeter.html', result=result)
 
@@ -138,7 +149,7 @@ def ergebnis():
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
             busse = 'Strafverfahren'
-        return render_template('ergebnis1.html', result=result, strafe=strafe, busse=busse)
+        return render_template('ergebnisse/ergebnis_30er_zone.html', result=result, strafe=strafe, busse=busse)
     
 #Strafenkatalog innerorts
     elif answer == '50':
@@ -184,7 +195,7 @@ def ergebnis():
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
             busse = 'Strafverfahren'
-        return render_template('ergebnis2.html', result=result, strafe=strafe, busse=busse)
+        return render_template('ergebnisse/ergebnis_innerorts.html', result=result, strafe=strafe, busse=busse)
     
 #Strafenkatalog Auserorts
     elif answer == '80':
@@ -236,7 +247,7 @@ def ergebnis():
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
             busse = 'Strafverfahren'
-        return render_template('ergebnis3.html', result=result, strafe=strafe, busse=busse)
+        return render_template('ergebnisse/ergebnis_ausserorts.html', result=result, strafe=strafe, busse=busse)
     
 # Strafenkatalog Autobahn
     elif answer == '120':
@@ -294,7 +305,7 @@ def ergebnis():
         else:
             strafe = 'mindestens 1 Jahr Freiheitsentzug'
             busse = 'Strafverfahren'
-        return render_template('ergebnis4.html', result=result, strafe=strafe, busse=busse)
+        return render_template('ergebnisse/ergebnis_autobahn.html', result=result, strafe=strafe, busse=busse)
 
 
 if __name__ == '__main__':
