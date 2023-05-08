@@ -1,13 +1,21 @@
-''' Code Descriptiopn:
+''' Code Description:
     This is the main file of the project. It contains all the routes and the logic of the application.
-    The application is a speed camera calculator for Switzerland. It calculates the fine and the
-    driving ban for the driver.
-    At first you have to input the country where you were speeding.
+    The application is a speed camera calculator for Switzerland. 
+    It calculates the fine and the driving ban for the driver.
+
+    At first you have to input the country where you were speeding. If you were speeding in Switzerland, you will be redirected to the speed input page.
+    Else you get some information about the speed law in the country you were speeding.
+
     Next you should estimate your speed and the speed limit. Then you have to choose the type of the speed camera.
     As well as you have to choose if you were speeding for the first time or not.
+
+    If you had a ban in the last two years, you will be redirected to the page with the information about the repeat offender.
+    Else you will be redirected to the page where you have to choose the street type you were caught.
+
+    If your speed difference is 0 or negative, you will be redirected to the page with no fine.
+    Else you will be redirected to the page with the fine and the eventually driving ban.
     
     The fines and the driving bans are calculated based on the Swiss law.'''
-
 
 
 #imports
@@ -39,9 +47,8 @@ def land_weiterleitung():
 def index():
     return render_template('eingabe.html')
 
-'''calculating the speed difference and redirecting to the street type selection
-If the difference is 0 or negative, the user is redirected to the page with no fine'''
-
+#calculating the speed difference and redirecting to the street type selection
+#If the difference is 0 or negative, the user is redirected to the page with no fine
 @app.route('/kategorie', methods=['POST'])
 def kategorie():
     gefahrene = int(request.form.get('gefahren'))
