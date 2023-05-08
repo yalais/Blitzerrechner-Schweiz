@@ -36,6 +36,7 @@ def kategorie():
     session['gefahrene'] = gefahrene
     session['erlaubte'] = erlaubte
     session['wiederholung'] = wiederholung
+    
 # berechne die überschreitung
     if radar == 'laser':
         if gefahrene < 100:
@@ -204,10 +205,10 @@ def ergebnis():
         elif result <= 49:
             strafe = '3 Monate Ausweisentzug'
             busse = '90 Tagessätze'
-        elif result <= 44:
+        elif result <= 54:
             strafe = '3 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
-        elif result <= 49:
+        elif result <= 59:
             strafe = '3 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         else:
@@ -256,16 +257,16 @@ def ergebnis():
         elif result <= 49:
             strafe = '3 Monate Ausweisentzug'
             busse = '50 Tagessätze'
-        elif result <= 44:
+        elif result <= 54:
             strafe = '3 Monate Ausweisentzug'
             busse = '60 Tagessätze'
-        elif result <= 49:
+        elif result <= 59:
             strafe = '3 Monate Ausweisentzug'
             busse = '70 Tagessätze'
-        elif result <= 44:
+        elif result <= 64:
             strafe = '3 Monate Ausweisentzug'
             busse = '90 Tagessätze'
-        elif result <= 49:
+        elif result <= 79:
             strafe = '3 Monate Ausweisentzug'
             busse = 'mindestens 120 Tagessätze'
         else:
@@ -277,8 +278,3 @@ def ergebnis():
 if __name__ == '__main__':
     app.run(debug=True)
 
-
-
-# Bild wird nicht angezeigt
-# wiederholungstäter bessere Lösung generieren
-# Dataframe zur auswahl der Strafen anstelle von unendlich vielen if else statements
