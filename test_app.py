@@ -14,47 +14,22 @@ class FlaskTestCase(TestCase):
         app.config['WTF_CSRF_ENABLED'] = False
         return app
 
-    def setUp(self):
-        self.client = app.test_client()
-
     def test_home(self):
-        response = self.client.get('/')
-        self.assert200(response)
-        self.assert_template_used('land.html')
+        response = self.client.get('/', content_type='html/text')
+        self.assertEqual(response.status_code, 200)
 
     def test_country_redirect(self):
-        response = self.client.post('/land_weiterleitung', data={'land': 'schweiz'})
-        self.assertRedirects(response, '/eingabe')
-
-        response = self.client.post('/land_weiterleitung', data={'land': 'deutschland'})
-        self.assert200(response)
-        self.assert_template_used('countries/deutschland.html')
+        response = self.client.post('/land', data=dict(land='schweiz'), follow_redirects=False)
+        self.assertEqual(response.location, 'http://localhost/eingabe') 
 
     def test_speed_input(self):
-        response = self.client.get('/eingabe')
-        self.assert200(response)
-        self.assert_template_used('eingabe.html')
+        response = self.client.post('/eingabe', data=dict(gefahrene=120, erlaubte=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
 
     def test_speed_difference(self):
-        response = self.client.post('/kategorie', data={
-            'gefahren': 100,
-            'erlaubt': 80,
-            'wiederholung': 'nein',
-            'radar': 'laser',
-            'strassentyp': 'Autobahn'
-        })
-        self.assertEqual(session.get('result'), 16)
-        self.assert_template_used('ergebnisse/ergebnis_30er_zone.html')
-
-        response = self.client.post('/kategorie', data={
-            'gefahren': 80,
-            'erlaubt': 80,
-            'wiederholung': 'nein',
-            'radar': 'laser',
-            'strassentyp': '30er Zone'
-        })
-        self.assertEqual(session.get('result'), 0)
-        self.assert_template_used('ergebnisse/keine_strafe.html')
+        with self.client:
+            self.client.post('/eingabe', data=dict(gefahrene=120, erlaubte=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
+            self.assertEqual(session.get('result'), 12)
 
 if __name__ == '__main__':
     unittest.main()

@@ -26,6 +26,7 @@ from flask_session import Session
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SSESSION_COOKIE_NAME'] = 'session'
 
 Session(app)
 
