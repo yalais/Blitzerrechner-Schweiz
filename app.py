@@ -15,7 +15,8 @@
     If your speed difference is 0 or negative, you will be redirected to the page with no fine.
     Else you will be redirected to the page with the fine and the eventually driving ban.
     
-    The fines and the driving bans are calculated based on the Swiss law.'''
+    The fines and the driving bans are calculated based on the Swiss law.
+'''
 
 
 #imports
@@ -300,4 +301,3 @@ def kategorie():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
