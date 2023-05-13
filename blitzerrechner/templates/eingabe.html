@@ -8,34 +8,48 @@
 </head>
 
 <style>
-    .radio-container {
+        .radio-container {
         display: inline-block;
         margin-right: 10px;
+        align-items: center;
     }
 </style>
 
 <body>
 <div>
     <section>
-        <h1>Geben Sie Ihre geschätze Geschwindigkeit, die erlaubte Geschwindigkeit sowie Ihren Status als Wiederholungstäter ein.</h1>
+        <h1>Blitzerrechner Schweiz</h1>
         <form action="/kategorie" method="post">
             <label for="gefahren">Gefahrene Geschwindigkeit:</label>
+            <p>Schätze deine gefahrene Geschwindigkeit</p>
             <input type="number" name="gefahren" id="gefahren" required>
-            <br>
+
             <label for="erlaubt">Erlaubte Geschwindigkeit:</label>
+            <p>Trage die erlaubte Geschwindigkeit ein</p>
             <input type="number" name="erlaubt" id="erlaubt" required>
-            <br>
+
             <label for="radar">Radar-Typ:</label>
+            <p>Mit welchem Radar-Typ wurdest du geblitzt?</p>
             <select name="radar" id="radar" required>
                 <option value="laser">Laser</option>
                 <option value="mobil">Mobil</option>
                 <option value="stationaer">Stationär</option>
             </select>
             <br>
+
+            <label for="strassentyp">Strassentyp:</label>
+            <p>Wähle den Strassentyp aus</p>
+
+            <select name="strassentyp" id="strassentyp">
+                {% for type in street_types %}
+                    <option value="{{ type }}">{{ type }}</option>
+                {% endfor %}
+            </select>
+
+            <br>
+
             <label for="wiederholung">Wiederholungstäter:</label>
-            <a>Hattest du in den letzten 2 Jahren einen Führerausweisentzug?</a>
-            <br>
-            <br>
+            <p>Hattest du in den letzten 2 Jahren einen Führerausweisentzug?</p>
             <div class="radio-container">
                 <input type="radio" id="ja" name="wiederholung" value="ja">
                 <label for="ja">Ja</label>
@@ -44,6 +58,8 @@
                 <input type="radio" id="nein" name="wiederholung" value="nein">
                 <label for="nein">Nein</label>
             </div>
+
+
             <br>
             <input type="submit" value="Weiter">
         </form>
