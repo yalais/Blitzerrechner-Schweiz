@@ -31,18 +31,23 @@
     <section id="form-section">
         <h1>Blitzerrechner Schweiz</h1>
         <form action="/kategorie" method="post">
+            <div>
             <label class = "label.title" for="gefahren">Gefahrene Geschwindigkeit:</label>
             <p>Schätze deine gefahrene Geschwindigkeit</p>
             <input type="number" name="gefahren" id="gefahren" required>
+            </div>
             <br>
             <br>
             
+            <div>
             <label class = "label.title" for="erlaubt">Erlaubte Geschwindigkeit:</label>
             <p>Trage die erlaubte Geschwindigkeit ein</p>
             <input type="number" name="erlaubt" id="erlaubt" required>
+            </div>
             <br>
             <br>
             
+            <div>
             <label class = "label.title" for="radar">Radar-Typ:</label>
             <p>Mit welchem Radar-Typ wurdest du geblitzt?</p>
             <select name="radar" id="radar" required>
@@ -50,8 +55,10 @@
                 <option value="mobil">Mobil</option>
                 <option value="stationaer">Stationär</option>
             </select>
+            </div>
             <br>
-            
+
+            <div>
             <label class = "label.title" for="strassentyp">Strassentyp:</label>
             <p>Wähle den Strassentyp aus</p>
 
@@ -60,15 +67,19 @@
                     <option value="{{ type }}">{{ type }}</option>
                 {% endfor %}
             </select>
-            <br>
-
-            <label class = "label.title" for="wiederholung">Wiederholungstäter:</label>
-            <div class="info-box">
-                <i class="info-icon">info</i>
-                <span class="info-text">Als Wiederholungstäter gillst du wenn du in den letzten 2 Jahren einen Führerausweisentzug hattest <br/>
-                    , du noch in der Probezeit oder deinen Führerausweis auf Probezeit besitzt </span>
             </div>
             <br>
+
+            <div class="label-container">
+                <label class="label.title" for="wiederholung">Wiederholungstäter:</label>
+            </div>
+            <div class="info-box">
+                <i class="info-icon">info</i>
+                <span class="info-text">Als Wiederholungstäter gillst du wenn du in den letzten 2 Jahren einen Führerausweisentzug hattest, 
+                    du dich noch in der Probezeit befindest oder deinen Führerausweis auf Probezeit besitzt </span>
+            </div>
+            <br>
+
             <div class="radio-container">
                 <input type="radio" id="ja" name="wiederholung" value="ja">
                 <label for="ja">Ja</label>
