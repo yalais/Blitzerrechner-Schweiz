@@ -79,23 +79,24 @@ input[type="submit"]:hover {
 .info-box {
     position: relative;
     display: inline-block;
-    margin-left: 5px;
+    padding: 10px;
+
 }
 
 .info-icon {
-    border-radius: 50%;
+    border-radius: 80%;
     background-color: #ddd;
-    padding: 2px;
+    padding: 4px;
     cursor: pointer;
 }
 
 .info-text {
     visibility: hidden;
     width: 800px;
-    background-color: #868585;
-    color: #fff;
+    background-color: #d5d2d2;
+    color: #111010;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px;
     position: absolute;
     z-index: 1;
     bottom: 125%; 

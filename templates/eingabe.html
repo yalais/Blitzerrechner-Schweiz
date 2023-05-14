@@ -31,24 +31,31 @@
     <section id="form-section">
         <h1>Blitzerrechner Schweiz</h1>
         <form action="/kategorie" method="post">
+            <!-- Eingabe gefahrene Geschwindigkeit -->
             <div>
             <label class = "label.title" for="gefahren">Gefahrene Geschwindigkeit:</label>
-            <p>Schätze deine gefahrene Geschwindigkeit</p>
+            <p>Gib deine gefahrene Geschwindigkeit ohne Abzug ein (ungefähr geschätzt)</p>
             <input type="number" name="gefahren" id="gefahren" required>
             </div>
             <br>
-            <br>
-            
+            <!-- Eingabe erlaubte Geschwindigkeit -->
             <div>
-            <label class = "label.title" for="erlaubt">Erlaubte Geschwindigkeit:</label>
-            <p>Trage die erlaubte Geschwindigkeit ein</p>
+            <label class = "label.title" for="erlaubt">Geschwindigkeitsbeschränkung:</label>
             <input type="number" name="erlaubt" id="erlaubt" required>
             </div>
             <br>
-            <br>
-            
+            <!-- Auswahl Radartyp -->
             <div>
-            <label class = "label.title" for="radar">Radar-Typ:</label>
+            <label class = "label.title" for="radar">Radar-Typ:
+                <div class="info-box">
+                    <i class="info-icon">info</i>
+                    <span class="info-text">
+                        Laser: Polizist mit Laserpistole <br/>
+                        Mobil: Radarkasten teilweise ab Polizeifahrzeug oder Kasten am Strassenrand <br/>
+                        Stationär: Ampelblitzer fest an einer Säule befestigt 
+                    </span>
+                </div>
+            </label>
             <p>Mit welchem Radar-Typ wurdest du geblitzt?</p>
             <select name="radar" id="radar" required>
                 <option value="laser">Laser</option>
@@ -57,7 +64,7 @@
             </select>
             </div>
             <br>
-
+            <!-- Auswahl des Strassentypes -->
             <div>
             <label class = "label.title" for="strassentyp">Strassentyp:</label>
             <p>Wähle den Strassentyp aus</p>
@@ -68,17 +75,15 @@
                 {% endfor %}
             </select>
             </div>
-            <br>
-
-            <div class="label-container">
-                <label class="label.title" for="wiederholung">Wiederholungstäter:</label>
-            </div>
-            <div class="info-box">
-                <i class="info-icon">info</i>
-                <span class="info-text">Als Wiederholungstäter gillst du wenn du in den letzten 2 Jahren einen Führerausweisentzug hattest, 
-                    du dich noch in der Probezeit befindest oder deinen Führerausweis auf Probezeit besitzt </span>
-            </div>
-            <br>
+            <!-- Auswahl Wiederholungstäter -->
+            <label class="label.title" for="wiederholung">Wiederholungstäter:
+                <div class="info-box">
+                    <i class="info-icon">info</i>
+                    <span class="info-text">Als Wiederholungstäter gillst du wenn du in den letzten 2 Jahren einen Führerausweisentzug hattest, 
+                        du dich noch in der Probezeit befindest oder deinen Führerausweis auf Probezeit besitzt 
+                    </span>
+                </div>
+            </label>
 
             <div class="radio-container">
                 <input type="radio" id="ja" name="wiederholung" value="ja">
@@ -92,14 +97,14 @@
             <input type="submit" value="Weiter">
         </form>
     </section>
-
+    <!-- Kontaktangaben -->
     <section>
         <h2>Kontakt</h2>
          <p>Bei Fragen erreichen Sie uns unter folgender <a href="mailto:yannic.lais@gmx.ch>">E-Mail.</a></p>
      </section>
-    
+    <!-- Footer -->
     <footer>
-        <p>© 2021 by blitzerrechner.ch</p>
+        <p>© 2023 by blitzerrechner.ch</p>
     </footer>
 </div>
 </body>
