@@ -35,12 +35,14 @@
             <p>Schätze deine gefahrene Geschwindigkeit</p>
             <input type="number" name="gefahren" id="gefahren" required>
             <br>
+            <br>
             
             <label class = "label.title" for="erlaubt">Erlaubte Geschwindigkeit:</label>
             <p>Trage die erlaubte Geschwindigkeit ein</p>
             <input type="number" name="erlaubt" id="erlaubt" required>
             <br>
-
+            <br>
+            
             <label class = "label.title" for="radar">Radar-Typ:</label>
             <p>Mit welchem Radar-Typ wurdest du geblitzt?</p>
             <select name="radar" id="radar" required>
@@ -49,7 +51,7 @@
                 <option value="stationaer">Stationär</option>
             </select>
             <br>
-
+            
             <label class = "label.title" for="strassentyp">Strassentyp:</label>
             <p>Wähle den Strassentyp aus</p>
 
@@ -58,7 +60,6 @@
                     <option value="{{ type }}">{{ type }}</option>
                 {% endfor %}
             </select>
-
             <br>
 
             <label class = "label.title" for="wiederholung">Wiederholungstäter:</label>
