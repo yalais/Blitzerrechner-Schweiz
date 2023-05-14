@@ -47,6 +47,8 @@ label {
     margin-bottom: 0.5em;
 }
 
+/* Formular-Elemente */
+
 input[type="text"],
 select {
     display: block;
@@ -72,3 +74,38 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+/* Infoboxen */
+
+.info-box {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.info-icon {
+    border-radius: 50%;
+    background-color: #ddd;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.info-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%; 
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.info-box:hover .info-text {
+    visibility: visible;
+    opacity: 1;
+}

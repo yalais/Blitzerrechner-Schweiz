@@ -8,27 +8,40 @@
 </head>
 
 <style>
-        .radio-container {
-        display: inline-block;
-        margin-right: 10px;
-        align-items: center;
+    .radio-container {
+    display: inline-block;
+    margin-right: 10px;
+    align-items: center;
     }
+
+    .label-title {
+    margin-top: 30px;
+    display: block;
+}
+
+#form-section {
+    width: 150%;
+    margin: 0 auto; /* Dies zentriert die Sektion */
+}
+
 </style>
 
 <body>
 <div>
-    <section>
+    <section id="form-section">
         <h1>Blitzerrechner Schweiz</h1>
         <form action="/kategorie" method="post">
-            <label for="gefahren">Gefahrene Geschwindigkeit:</label>
+            <label class = "label.title" for="gefahren">Gefahrene Geschwindigkeit:</label>
             <p>Schätze deine gefahrene Geschwindigkeit</p>
             <input type="number" name="gefahren" id="gefahren" required>
-
-            <label for="erlaubt">Erlaubte Geschwindigkeit:</label>
+            <br>
+            
+            <label class = "label.title" for="erlaubt">Erlaubte Geschwindigkeit:</label>
             <p>Trage die erlaubte Geschwindigkeit ein</p>
             <input type="number" name="erlaubt" id="erlaubt" required>
+            <br>
 
-            <label for="radar">Radar-Typ:</label>
+            <label class = "label.title" for="radar">Radar-Typ:</label>
             <p>Mit welchem Radar-Typ wurdest du geblitzt?</p>
             <select name="radar" id="radar" required>
                 <option value="laser">Laser</option>
@@ -37,7 +50,7 @@
             </select>
             <br>
 
-            <label for="strassentyp">Strassentyp:</label>
+            <label class = "label.title" for="strassentyp">Strassentyp:</label>
             <p>Wähle den Strassentyp aus</p>
 
             <select name="strassentyp" id="strassentyp">
@@ -48,8 +61,13 @@
 
             <br>
 
-            <label for="wiederholung">Wiederholungstäter:</label>
-            <p>Hattest du in den letzten 2 Jahren einen Führerausweisentzug?</p>
+            <label class = "label.title" for="wiederholung">Wiederholungstäter:</label>
+            <div class="info-box">
+                <i class="info-icon">info</i>
+                <span class="info-text">Als Wiederholungstäter gillst du wenn du in den letzten 2 Jahren einen Führerausweisentzug hattest <br/>
+                    , du noch in der Probezeit oder deinen Führerausweis auf Probezeit besitzt </span>
+            </div>
+            <br>
             <div class="radio-container">
                 <input type="radio" id="ja" name="wiederholung" value="ja">
                 <label for="ja">Ja</label>
@@ -58,8 +76,6 @@
                 <input type="radio" id="nein" name="wiederholung" value="nein">
                 <label for="nein">Nein</label>
             </div>
-
-
             <br>
             <input type="submit" value="Weiter">
         </form>
