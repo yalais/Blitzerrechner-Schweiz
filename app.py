@@ -79,21 +79,21 @@ def kategorie():
     if radar == 'laser':
         if gefahrene < 100:
             result = gefahrene - erlaubte - 3
-        elif gefahrene <= 100 and gefahrene < 150:
+        elif gefahrene >= 100 and gefahrene < 150:
             result = gefahrene - erlaubte - 4
         elif gefahrene >= 150:
             result = gefahrene - erlaubte - 5
     elif radar == 'mobil':
         if gefahrene < 100:
             result = gefahrene - erlaubte - 7
-        elif gefahrene <= 100 and gefahrene < 150:
+        elif gefahrene >= 100 and gefahrene < 150:
             result = gefahrene - erlaubte - 8
         elif gefahrene >= 150:
             result = gefahrene - erlaubte - 9
     elif radar == 'stationaer':
         if gefahrene < 100:
             result = gefahrene - erlaubte - 5
-        elif gefahrene <= 100 and gefahrene < 150:
+        elif gefahrene >= 100 and gefahrene < 150:
             result = gefahrene - erlaubte - 6
         elif gefahrene >= 150:
             result = gefahrene - erlaubte - 7

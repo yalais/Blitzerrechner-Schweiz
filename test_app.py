@@ -20,7 +20,7 @@ class FlaskTestCase(TestCase):
 
     def test_country_redirect(self):
         response = self.client.post('/land', data=dict(land='schweiz'), follow_redirects=False)
-        self.assertEqual(response.location, 'http://localhost/eingabe') 
+        self.assertEqual(response.location, 'http://127.0.0.1:5000/eingabe') 
 
     def test_speed_input(self):
         response = self.client.post('/eingabe', data=dict(gefahrene=120, erlaubte=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
