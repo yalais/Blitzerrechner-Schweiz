@@ -23,7 +23,7 @@ class FlaskTestCase(TestCase):
         self.assertEqual(response.location, '/eingabe') 
 
     def test_speed_input(self):
-        response = self.client.post('/eingabe', data=dict(gefahrene=120, erlaubte=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
+        response = self.client.post('/kategorie', data=dict(gefahren=120, erlaubt=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
     def test_speed_difference(self):
