@@ -28,7 +28,7 @@ class FlaskTestCase(TestCase):
 
     def test_speed_difference(self):
         with self.client:
-            self.client.post('/eingabe', data=dict(gefahrene=120, erlaubte=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
+            self.client.post('/kategorie', data=dict(gefahren=120, erlaubt=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
             self.assertEqual(session.get('result'), 12)
 
 if __name__ == '__main__':
