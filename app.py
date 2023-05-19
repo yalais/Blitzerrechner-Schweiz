@@ -53,7 +53,7 @@ def land_weiterleitung():
         return render_template('countries/lichtenstein.html')
 
 
-# redericting to the speed input page
+# give the eingabe.html file the street types
 @app.route('/eingabe')
 def index():
     street_types = ['30er Zone', 'Innerorts', 'Ausserorts', 'Autobahn']
