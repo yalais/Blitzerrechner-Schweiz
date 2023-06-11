@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles Ergebnisse */
 
 body {
     font-family: Arial, sans-serif;
@@ -16,8 +16,8 @@ body {
 }
 
 .container {
-    width: 80%; /* Anpassen, um die gewünschte Breite zu erreichen */
-    max-width: 1200px; /* Maximale Breite des Containers */
+    width: 80%; 
+    max-width: 1200px;
 }
 
 .centered {
@@ -44,4 +44,39 @@ p {
 ul {
     list-style-type: disc;
     padding-left: 1em;
+}
+
+/* Navigation */
+
+ul.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #79a9f8;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 250px;
+    border: #111010 solid 1px;
+    border-radius: 5px;
+}
+
+/* status for hover or no-hover */
+.hover-enabled a:hover {
+    background-color: #9ff6b6;
+}
+
+/* Aktiver Link */
+.active {
+    background-color: #4CAF50;
 }

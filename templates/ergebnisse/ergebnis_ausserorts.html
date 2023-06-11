@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ergebniss Ausserorts </title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_ergebnisse.css') }}">
-</head>
-<body>
+<!--Ergebnis Ausserorts-->
+{% extends "base.html" %}
+{% set title = "Ausserorts" %}
+{% set stylesheet = "static/style_ergebnisse.css" %}
+
+{% block body %}
+
 <div class="container">
     <header class="centered">
         <h1>Ausserorts</h1>
@@ -23,23 +20,7 @@
             <li>Ab einer Geschwindigkeitsüberschreitung von <b>60 km/h</b> fallen Sie unter das <b>Rasergesetz</b>. Wir empfehlen Ihnen <b>dringend einen Anwalt</b> zu kontaktieren</li>
         </ul>
     </section>
-
-    <section>
-        <h2>Memorium</h2>
-        <p>
-            Weil du zu schnell warst musst du ins Gefängnis, für immer!
-        </p>
-    </section>
-
-    <section id="section4">
-        <h2>Kontakt</h2>
-        <p>Bei Fragen erreichen Sie uns unter folgender <a href="mailto:yannic.lais@gmx.ch>">E-Mail.</a></p>
-        </section>
-
-    <footer>
-        <p>© 2023 by blitzerrechner.ch</p>
-    </footer>
 </div>
 
-</body>
-</html>
+{% endblock %}
+

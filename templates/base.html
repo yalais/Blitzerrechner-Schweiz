@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Blitzerrechner</title>
-    <!-- Add your CSS file path here -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Title and stylesheet as variable -->
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
+    
 </head>
-<body>
+<!-- Variable for different bodies -->
+<body class="{{ body_class }}">
     <!-- Navigation -->
     <nav>
-        <ul>
+        <ul class="nav-list">
             <li class="{{ 'active' if request.path == '/' }} hover-enabled"><a href="{{ url_for('land') }}">Länderauswahl</a></li>
             <li class="{{ 'active' if request.path == '/eingabe' }} hover-enabled"><a href="{{ url_for('index') }}">Eingabe</a></li>
-            <li class="{{ 'active' if request.path == '/kategorie' }}"><a>Ergebnis</a></li>
+            <li class="{{ 'active' if request.path == '/kategorie' or request.path == '/land_weiterleitung' }}"><a>Ergebnis</a></li>
         </ul>
     </nav>
 
