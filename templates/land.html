@@ -1,40 +1,27 @@
 <!-- land.html -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Landauswahl</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div>
-        <section>
-            <h1>Landesauswahl</h1>
-            <p>Wo wurden Sie geblitzt</p>
-            <form action="/land_weiterleitung" method="post">
-                <label for="land">Land:</label>
-                <select name="land" id="land">
-                    <option value="schweiz">Schweiz</option>
-                    <option value="oesterreich">Österreich</option>
-                    <option value="deutschland">Deutschland</option>
-                    <option value="italien">Italien</option>
-                    <option value="frankreich">Frankreich</option>
-                    <option value="lichtenstein">Lichteinstein</option>
-                </select>
-                <br>
-                <input type="submit" value="Weiter">
-            </form>
-        </section>
+{% extends "base.html" %}
 
-        <section>
-            <h4>Kontakt</h4>
-            <p>Bei Fragen erreichen Sie uns unter folgender <a href="mailto:yannic.lais@gmx.ch>">E-Mail.</a></p>
-        </section>
+{% block body %}
 
-        <footer>
-            <p>© 2023 by blitzerrechner.ch</p>
-        </footer>
+<div>
+    <section>
+        <h1>Landesauswahl</h1>
+        <p>Wo wurden Sie geblitzt</p>
+        <form action="/land_weiterleitung" method="post">
+            <label for="land">Land:</label>
+            <select name="land" id="land">
+                <option value="schweiz">Schweiz</option>
+                <option value="oesterreich">Österreich</option>
+                <option value="deutschland">Deutschland</option>
+                <option value="italien">Italien</option>
+                <option value="frankreich">Frankreich</option>
+                <option value="lichtenstein">Lichteinstein</option>
+            </select>
+            <br>
+            <input type="submit" value="Weiter">
+        </form>
+    </section>
 
-    </div>
-</body>
-</html>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Blitzerrechner</title>
+    <!-- Add your CSS file path here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li class="{{ 'active' if request.path == '/' }}"><a href="{{ url_for('land') }}">Länderauswahl</a></li>
+            <li class="{{ 'active' if request.path == '/eingabe' }}"><a href="{{ url_for('index') }}">Eingabe</a></li>
+            <li>Ergebnis</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    {% block body %}{% endblock %}
+
+    <!-- Kontakt -->
+    <section>
+        <h2>Kontakt</h2>
+         <p>Bei Fragen erreichen Sie uns unter folgender <a href="mailto:yannic.lais@gmx.ch>">E-Mail.</a></p>
+     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 by blitzerrechner.ch</p>
+    </footer>
+</body>
+</html>

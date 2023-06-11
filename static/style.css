@@ -74,6 +74,12 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+.radio-container {
+    display: inline-block;
+    margin-right: 10px;
+    align-items: center;
+    }
+
 /* Infoboxen */
 
 .info-box {
@@ -109,4 +115,36 @@ input[type="submit"]:hover {
 .info-box:hover .info-text {
     visibility: visible;
     opacity: 1;
+}
+
+/* Navigation */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #95b9f2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Wenn der Benutzer mit der Maus über das Navigationslink fährt */
+li a:hover {
+    background-color: #9ff6b6;
+}
+
+/* Aktiver Link */
+.active {
+    background-color: #4CAF50;
 }
