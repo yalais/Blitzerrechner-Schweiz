@@ -1,109 +1,71 @@
 <!-- ausland.html -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Österreich</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-<style>
-    section {
-        margin-bottom: 20px;
-    }
+{% extends "base.html" %}
 
-    .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table th, .table td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
-        .table th, .table td {
-            background-color: #aba8a84e;
-            font-weight: bold;
-        }
-</style>
+{% block body %}
 
-</head>
-<body>
-    <div>
-        <section>
-            <h1>Österreich</h1>
-            <h4>Leider funktionieren die Berechnungen momentan erst in der Schweiz. <br/>
-            Anbei finden Sie jedoch einige spannende Seiten, welche Ihnen helfen könnten.</h4>
-        </section>
-        <br>
-        <br>
-        <section>
-            <h2>Bussenkatalog Österreich</h2>
-            <ul>
-                <li><a href = "https://autorevue.at/bussgeldrechner">Bussgeldrechner Österreich</a></li>
-            </ul>
-            <h4>Tabelle der häufigsten Verkehrsverstösse</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Übertretung</th>
-                        <th>Bußgeld</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Geschwindigkeitsverstoß ab 20 km/h</td>
-                        <td>mind. 30 €</td>
-                    </tr>
-                    <tr>
-                        <td>Geschwindigkeitsverstoß über 50 km/h</td>
-                        <td>bis zu 2.180 €</td>
-                    </tr>
-                    <tr>
-                        <td>Alkohol am Steuer (ab 0,5 Promille)</td>
-                        <td>mind. 300 €</td>
-                    </tr>
-                    <tr>
-                        <td>Missachtung von Rotlicht (Ampel)</td>
-                        <td>mind. 70 €</td>
-                    </tr>
-                    <tr>
-                        <td>Überholvergehen</td>
-                        <td>mind. 40 €</td>
-                    </tr>
-                    <tr>
-                        <td>Handy am Steuer</td>
-                        <td>mind. 50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Missachtung der Gurtpflicht</td>
-                        <td>mind. 35 €</td>
-                    </tr>
-                    <tr>
-                        <td>Kein Mitführen einer Warnweste</td>
-                        <td>mind. 14 €</td>
-                    </tr>
-                    <tr>
-                        <td>Verstoß gegen die Winterreifenpflicht</td>
-                        <td>mind. 60 €</td>
-                    </tr>
-                    <tr>
-                        <td>Parkvergehen / Falschparken</td>
-                        <td>mind. 20 €</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <br>
-        <br>
-        <section>
-            <h2>Kontakt</h2>
-            <p>Bei Fragen erreichen Sie uns unter folgender <a href="mailto:yannic.lais@gmx.ch>">E-Mail.</a></p>
-        </section>
+<div>
+    <section>
+        <h1>Österreich</h1>
+        <h4>Leider funktionieren die Berechnungen momentan erst in der Schweiz. <br/>
+        Anbei finden Sie jedoch einige spannende Seiten, welche Ihnen helfen könnten.</h4>
+    </section>
+    <section>
+        <h2>Bussenkatalog Österreich</h2>
+        <ul class="li-land-list">
+            <li class="li-land"><a href = "https://autorevue.at/bussgeldrechner">Bussgeldrechner Österreich</a></li>
+        </ul>
+        <h4>Tabelle der häufigsten Verkehrsverstösse</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Übertretung</th>
+                    <th>Bußgeld</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Geschwindigkeitsverstoß ab 20 km/h</td>
+                    <td>mind. 30 €</td>
+                </tr>
+                <tr>
+                    <td>Geschwindigkeitsverstoß über 50 km/h</td>
+                    <td>bis zu 2.180 €</td>
+                </tr>
+                <tr>
+                    <td>Alkohol am Steuer (ab 0,5 Promille)</td>
+                    <td>mind. 300 €</td>
+                </tr>
+                <tr>
+                    <td>Missachtung von Rotlicht (Ampel)</td>
+                    <td>mind. 70 €</td>
+                </tr>
+                <tr>
+                    <td>Überholvergehen</td>
+                    <td>mind. 40 €</td>
+                </tr>
+                <tr>
+                    <td>Handy am Steuer</td>
+                    <td>mind. 50 €</td>
+                </tr>
+                <tr>
+                    <td>Missachtung der Gurtpflicht</td>
+                    <td>mind. 35 €</td>
+                </tr>
+                <tr>
+                    <td>Kein Mitführen einer Warnweste</td>
+                    <td>mind. 14 €</td>
+                </tr>
+                <tr>
+                    <td>Verstoß gegen die Winterreifenpflicht</td>
+                    <td>mind. 60 €</td>
+                </tr>
+                <tr>
+                    <td>Parkvergehen / Falschparken</td>
+                    <td>mind. 20 €</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
 
-        <footer>
-            <p>© 2023 by blitzerrechner.ch</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+{% endblock %}
