@@ -9,6 +9,15 @@ The Application is structuret in different Python, HTML and CSS files.
 :file_folder: "static" -> Contains the CSS-Sytelsheet as well as images.<br />
 :file_folder: "templates" -> Stores all the HTML-templates. The main structure is in the base.html file.<br />
 
+### Important files
+
+![Icon CSS](static/icons/css.svg)
+![Icon HTML](static/icons/html.svg)
+![Icon Python](static/icons/python.svg)
+![Icon Python](static/icons/python.svg)
+![Icon Python](static/icons/python.svg)
+
+
 ## Requerements
 For this project Python 3.10.4 and pip 22.0.4 was used.
 
