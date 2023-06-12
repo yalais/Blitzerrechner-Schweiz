@@ -1,4 +1,4 @@
-<img src="https://devicon-website.vercel.app/api/flask/original.svg"></img>
+<img src="https://devicon-website.vercel.app/api/flask/original.svg" width="100" height="100"></img>
 
 # Speeding ticket calucaltor for Switzerland
 In this repository you can run a webapplication, which runs a speeding ticket calculator locally on your maschine.
