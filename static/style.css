@@ -69,7 +69,7 @@ form {
     padding: 2em;
     background-color: #6c8cc12e;
     border: 1px solid #201f1f;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 label {
@@ -87,7 +87,7 @@ select {
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 input[type="submit"] {
@@ -158,7 +158,6 @@ ul.nav-list {
     padding: 0;
     overflow: hidden;
     background-color: #79a9f8;
-    border-radius: 5px;
 }
 
 li {
@@ -171,9 +170,8 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    width: 250px;
+    width: 280px;
     border: #111010 solid 1px;
-    border-radius: 5px;
 }
 
 /* status for hover or no-hover */
