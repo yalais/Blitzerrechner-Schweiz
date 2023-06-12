@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div style="align:center">
     <img src="static/icons/flask.svg" width="200" height="200" alt="Flask Icon">
 </div>
 
