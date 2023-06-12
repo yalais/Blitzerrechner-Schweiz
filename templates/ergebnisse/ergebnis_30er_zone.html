@@ -1,8 +1,8 @@
 <!--Ergebnis 30er Zone-->
 {% extends "base.html" %}
 {% set title = "30er-Zone" %}
-{% set stylesheet = "static/style_ergebnisse.css" %}
-{% set body_class = "ergebnis" %}
+{% set stylesheet = "static/style.css" %}
+{% set body_class = "ergebnisse" %}
 
 {% block body %}
 
@@ -14,14 +14,13 @@
 
     <section>
         <h2>Alles auf einen Blick</h2>
-        <ul>
-            <li>Bei Geschwindigkeitsüberschreitungen bis und mit <b>15 km/h</b> ist nur mit Bussen <b>bis maximal 250.- CHF</b> zu rechnen</li>
-            <li>Bei Geschwindigkeitsüberschreitungen bis und mit <b>19 km/h</b> ist mit <b>Bussen</b> und/ oder <b>gemeinnütziger Arbeit</b> zu rechnen</li>
-            <li>Bei Geschwindigkeitsüberschreitungen bis und mit <b>39 km/h</b> ist mit <b>Bussen</b>, <b>Geldstrafe</b>, <b>Freiheitsstrafe</b> oder <b>gemeinnütziger Arbeit</b> zu rechnen</li>
-            <li>Ab einer Geschwindigkeitsüberschreitung von <b>40 km/h</b> fallen Sie unter das <b>Rasergesetz</b>. Wir empfehlen Ihnen <b>dringend einen Anwalt</b> zu kontaktieren</li>
+        <ul class="ergebnis-list">
+            <li class="simple">Bei Geschwindigkeitsüberschreitungen bis und mit <b>15 km/h</b> ist nur mit Bussen <b>bis maximal 250.- CHF</b> zu rechnen</li>
+            <li class="simple">Bei Geschwindigkeitsüberschreitungen bis und mit <b>19 km/h</b> ist mit <b>Bussen</b> und/ oder <b>gemeinnütziger Arbeit</b> zu rechnen</li>
+            <li class="simple">Bei Geschwindigkeitsüberschreitungen bis und mit <b>39 km/h</b> ist mit <b>Bussen</b>, <b>Geldstrafe</b>, <b>Freiheitsstrafe</b> oder <b>gemeinnütziger Arbeit</b> zu rechnen</li>
+            <li class="simple">Ab einer Geschwindigkeitsüberschreitung von <b>40 km/h</b> fallen Sie unter das <b>Rasergesetz</b>. Wir empfehlen Ihnen <b>dringend einen Anwalt</b> zu kontaktieren</li>
         </ul>
     </section>
 </div>
 
 {% endblock %}
-
