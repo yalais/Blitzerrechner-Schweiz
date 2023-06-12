@@ -1,7 +1,6 @@
-<div style="align:center">
-    <img src="static/icons/flask.svg" width="200" height="200" alt="Flask Icon">
-</div>
-
+<p align="center">
+  <img src="static/icons/flask.svg" alt="Flask Icon" width="200" height="200">
+</p>
 
 # Speeding ticket calculator for Switzerland
 In this repository, you can run a Flask web application, which runs a speeding ticket calculator locally on your machine.
