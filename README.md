@@ -12,6 +12,7 @@ The Application is structuret in different Python, HTML and CSS files.
 ### Important files
 
 ![Icon CSS](static/icons/css.svg)
+<img src="static/icons/css.svg" alt="Icon CSS" width="50" height="50">
 ![Icon HTML](static/icons/html.svg)
 ![Icon Python](static/icons/python.svg)
 ![Icon Python](static/icons/python.svg)
