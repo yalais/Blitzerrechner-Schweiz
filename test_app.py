@@ -7,6 +7,7 @@ import unittest
 from flask import session
 from flask_testing import TestCase
 from app import app
+from calculations import speed_difference, penalty_30er_zone, penalty_innerorts, penalty_ausserorts, penalty_autobahn
 
 class FlaskTestCase(TestCase):
     def create_app(self):
@@ -29,22 +30,15 @@ class FlaskTestCase(TestCase):
         response = self.client.post('/kategorie', data=dict(gefahren=120, erlaubt=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
-    # Checks whether the correct speed
-    def test_speed_difference(self):
-        with self.client:
-            self.client.post('/kategorie', data=dict(gefahren=120, erlaubt=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
-            self.assertEqual(session.get('result'), 12)
-
-    # Checks the calculations in the calculations.py file
+    # Checks different calculations in the calculations.py file
     def test_calculations(self):
-        from calculations import speed_difference, penalty_30er_zone, penalty_innerorts, penalty_ausserorts, penalty_autobahn
         self.assertEqual(speed_difference(70, 60, 'laser'), 7)
         self.assertEqual(penalty_30er_zone(5), ('keine weitere Strafe', 40))
         self.assertEqual(penalty_innerorts(10), ('keine weitere Strafe', 120))
         self.assertEqual(penalty_ausserorts(15), ('keine weitere Strafe', 160))
         self.assertEqual(penalty_autobahn(20), ('keine weitere Strafe', 180))
 
-    # Tests the 'category' route and checks if the correct penalty is calculated
+    # Tests the 'category' route with cookies and checks if the correct speed is calculated
     def test_kategorie(self):
         with self.client as c:
             with c.session_transaction() as sess:
@@ -55,6 +49,12 @@ class FlaskTestCase(TestCase):
             response = self.client.post('/kategorie', data={'gefahren': 80, 'erlaubt': 70, 'wiederholung': 'nein', 'strassentyp': 'Autobahn', 'radar': 'laser'})
             self.assertIn('result', session)
             self.assertEqual(session['result'], 7)
+
+    # another speed difference test
+    def test_speed_difference(self):
+        with self.client:
+            self.client.post('/kategorie', data=dict(gefahren=120, erlaubt=100, wiederholung = 'nein', strassentyp = 'Autobahn', radar = 'mobil'), follow_redirects=True)
+            self.assertEqual(session.get('result'), 12)
 
     
 if __name__ == '__main__':
