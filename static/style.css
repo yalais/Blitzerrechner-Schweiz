@@ -217,6 +217,17 @@ li a {
     text-decoration: underline;
 }
 
+.li-land-list {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.li-land {
+    padding: 10px 0; 
+    border-bottom: 1px solid #ddd; 
+}
+
 /* styles land table */
 .table {
     width: 100%;
@@ -300,3 +311,11 @@ li.simple {
     float: none; 
     list-style-type: disc;
 }
+
+.simple-a {
+    color: #333; 
+    text-decoration: none; 
+    font-size: 14px; 
+}
+
+
