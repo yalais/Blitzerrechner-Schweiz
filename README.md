@@ -11,11 +11,11 @@ The Application is structuret in different Python, HTML and CSS files.
 
 ### Important files
 
-<img src="static/icons/css.svg" alt="Icon CSS" width="10" height="10">
-<img src="static/icons/html.svg" alt="Icon HTML" width="10" height="10">
-<img src="static/icons/python.svg" alt="Icon Python" width="10" height="10">
-<img src="static/icons/python.svg" alt="Icon Python" width="10" height="10">
-<img src="static/icons/python.svg" alt="Icon Python" width="10" height="10">
+<img src="static/icons/css.svg" alt="Icon CSS" width="20" height="20">
+<img src="static/icons/html.svg" alt="Icon HTML" width="20" height="20">
+<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20">
+<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20">
+<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20">
 
 
 
