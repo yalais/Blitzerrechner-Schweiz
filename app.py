@@ -83,7 +83,7 @@ def kategorie():
     session['result'] = result
 
     # if the user is a repeat offender, he will be redirected to the page with the information about the repeat offender
-    if wiederholung == 'ja':
+    if wiederholung == 'ja' and result >= 15:
         return render_template('ergebnisse/wiederholungstaeter.html', result=result)
 
     #Strafenkatalog für 30er-Zone
