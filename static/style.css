@@ -62,6 +62,12 @@ section {
     padding: 0px;
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* Formular-Stile */
 form {
     width: 600px;
