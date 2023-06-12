@@ -1,5 +1,6 @@
+<div style="text-align:center">
 <img src="static/icons/flask.svg" width="100" height="100"></img>
-
+</div>
 # Speeding ticket calucaltor for Switzerland
 In this repository you can run a webapplication, which runs a speeding ticket calculator locally on your maschine.
 
@@ -11,11 +12,11 @@ The Application is structuret in different Python, HTML and CSS files.
 
 ### Important files
 
-<img src="static/icons/css.svg" alt="Icon CSS" width="20" height="20">
-<img src="static/icons/html.svg" alt="Icon HTML" width="20" height="20">
-<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20">
-<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20">
-<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20">
+<img src="static/icons/css.svg" alt="Icon CSS" width="20" height="20"> "style.css" ->
+<img src="static/icons/html.svg" alt="Icon HTML" width="20" height="20"> "base.html" ->
+<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20"> "app.py" ->
+<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20"> "calculations.py" ->
+<img src="static/icons/python.svg" alt="Icon Python" width="20" height="20"> "test_app.py" ->
 
 
 
