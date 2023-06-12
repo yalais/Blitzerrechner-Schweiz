@@ -1,4 +1,4 @@
-<img src="https://devicon-website.vercel.app/api/flask/original.svg" width="100" height="100"></img>
+<img src="static/icons/flask.svg" width="100" height="100"></img>
 
 # Speeding ticket calucaltor for Switzerland
 In this repository you can run a webapplication, which runs a speeding ticket calculator locally on your maschine.
@@ -11,12 +11,12 @@ The Application is structuret in different Python, HTML and CSS files.
 
 ### Important files
 
-![Icon CSS](static/icons/css.svg)
-<img src="static/icons/css.svg" alt="Icon CSS" width="50" height="50">
-![Icon HTML](static/icons/html.svg)
-![Icon Python](static/icons/python.svg)
-![Icon Python](static/icons/python.svg)
-![Icon Python](static/icons/python.svg)
+<img src="static/icons/css.svg" alt="Icon CSS" width="10" height="10">
+<img src="static/icons/html.svg" alt="Icon HTML" width="10" height="10">
+<img src="static/icons/python.svg" alt="Icon Python" width="10" height="10">
+<img src="static/icons/python.svg" alt="Icon Python" width="10" height="10">
+<img src="static/icons/python.svg" alt="Icon Python" width="10" height="10">
+
 
 
 ## Requerements
