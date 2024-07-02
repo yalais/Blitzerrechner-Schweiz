@@ -33,4 +33,3 @@ To start the application locally navigate in your terminal to the folder in whic
 ``` 
 python app.py
 ``` 
-
