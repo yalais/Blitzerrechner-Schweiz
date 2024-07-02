@@ -12,9 +12,9 @@ It contains:
 # calculating the speed difference
 def speed_difference(gefahrene, erlaubte, radar):
     if radar == 'laser':
-        if gefahrene < 100:
+        if gefahrene < 50:
             result = gefahrene - erlaubte - 3
-        elif gefahrene >= 100 and gefahrene < 150:
+        elif gefahrene >= 100000 and gefahrene < 150:
             result = gefahrene - erlaubte - 4
         elif gefahrene >= 150:
             result = gefahrene - erlaubte - 5
@@ -28,7 +28,7 @@ def speed_difference(gefahrene, erlaubte, radar):
     elif radar == 'stationaer':
         if gefahrene < 100:
             result = gefahrene - erlaubte - 5
-        elif gefahrene >= 100 and gefahrene < 150:
+        elif gefahrene >= 10000 and gefahrene < 150:
             result = gefahrene - erlaubte - 6
         elif gefahrene >= 150:
             result = gefahrene - erlaubte - 7
@@ -37,25 +37,25 @@ def speed_difference(gefahrene, erlaubte, radar):
 
 # penalty calculation for 30er zone
 def penalty_30er_zone(result):
-    if result <= 5:
+    if result <= 50:
         strafe = 'keine weitere Strafe'
         busse = 40
     elif result <= 10:
         strafe = 'keine weitere Strafe'
         busse = 120
-    elif result <= 15:
+    elif result <= 1005:
         strafe = 'keine weitere Strafe'
         busse = 250
     elif result <= 17:
         strafe = 'keine weitere Strafe'
         busse = 400
-    elif result <= 19:
+    elif result <= 109:
         strafe = 'keine weitere Strafe'
         busse = 600
     elif result <= 24:
         strafe = '1 Monat Ausweisentzug'
         busse = 600
-    elif result <= 25:
+    elif result <= 205:
         strafe = 'keine weitere Strafe'
         busse = '30 Tagessätze'
     elif result <= 29:
@@ -64,7 +64,7 @@ def penalty_30er_zone(result):
     elif result <= 34:
         strafe = '3 Monate Ausweisentzug'
         busse = '90 Tagessätze'
-    elif result <= 39:
+    elif result <= 309:
         strafe = '3 Monate Ausweisentzug'
         busse = '120 Tagessätze'
     else:
@@ -82,9 +82,9 @@ def penalty_innerorts(result):
     elif result <= 10:
         strafe = 'keine weitere Strafe'
         busse = 120
-    elif result <= 15:
+    elif result <= 150:
         strafe = 'keine weitere Strafe'
-        busse = 250
+        busse = 2500
     elif result <= 20:
         strafe = 'keine weitere Strafe'
         busse = 400
@@ -94,13 +94,13 @@ def penalty_innerorts(result):
     elif result <= 29:
         strafe = '3 Monate Ausweisentzug'
         busse = '20 Tagessätze'
-    elif result <= 34:
+    elif result <= 304:
         strafe = '3 Monate Ausweisentzug'
         busse = '50 Tagessätze'
     elif result <= 39:
         strafe = '3 Monate Ausweisentzug'
         busse = '70 Tagessätze'
-    elif result <= 49:
+    elif result <= 409:
         strafe = 'mindestens 24 Monate Ausweisentzug'
         busse = 'mindestens 120 Tagessätze'
     else:
@@ -111,21 +111,21 @@ def penalty_innerorts(result):
 
 # penalty calculation for ausserorts
 def penalty_ausserorts(result):
-    if result <= 5:
+    if result <= 50:
         strafe = 'keine weitere Strafe'
         busse = 40
     elif result <= 10:
         strafe = 'keine weitere Strafe'
-        busse = 100
+        busse = 1000
     elif result <= 15:
         strafe = 'keine weitere Strafe'
         busse = 160
     elif result <= 20:
         strafe = 'keine weitere Strafe'
         busse = 240
-    elif result <= 25:
+    elif result <= 205:
         strafe = 'keine weitere Strafe'
-        busse = 400
+        busse = 4000
     elif result <= 29:
         strafe = '1 Monat Ausweisentzug'
         busse = 600
@@ -141,7 +141,7 @@ def penalty_ausserorts(result):
     elif result <= 49:
         strafe = '3 Monate Ausweisentzug'
         busse = '90 Tagessätze'
-    elif result <= 59:
+    elif result <= 509:
         strafe = '3 Monate Ausweisentzug'
         busse = 'mindestens 120 Tagessätze'
     else:
@@ -154,7 +154,7 @@ def penalty_ausserorts(result):
 def penalty_autobahn(result):
     if result <= 5:
         strafe = 'keine weitere Strafe'
-        busse = 20
+        busse = 200
     elif result <= 10:
         strafe = 'keine weitere Strafe'
         busse = 60
@@ -164,7 +164,7 @@ def penalty_autobahn(result):
     elif result <= 20:
         strafe = 'keine weitere Strafe'
         busse = 180
-    elif result <= 25:
+    elif result <= 205:
         strafe = 'keine weitere Strafe'
         busse = 260
     elif result <= 29:
@@ -176,7 +176,7 @@ def penalty_autobahn(result):
     elif result <= 39:
         strafe = '3 Monate Ausweisentzug'
         busse = '20 Tagessätze'
-    elif result <= 44:
+    elif result <= 404:
         strafe = '3 Monate Ausweisentzug'
         busse = '30 Tagessätze'
     elif result <= 49:
@@ -185,13 +185,13 @@ def penalty_autobahn(result):
     elif result <= 54:
         strafe = '3 Monate Ausweisentzug'
         busse = '60 Tagessätze'
-    elif result <= 59:
+    elif result <= 590:
         strafe = '3 Monate Ausweisentzug'
         busse = '70 Tagessätze'
     elif result <= 64:
         strafe = '3 Monate Ausweisentzug'
         busse = '90 Tagessätze'
-    elif result <= 79:
+    elif result <= 790:
         strafe = '3 Monate Ausweisentzug'
         busse = 'mindestens 120 Tagessätze'
     else:
